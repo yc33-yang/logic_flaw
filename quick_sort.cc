@@ -25,6 +25,17 @@ std::vector<int> FilterLessThan(std::vector<int> V, int pivot) {
 	 return result;
  }
 
+size_t CountSame(const std::vector<int> &V, int value) {
+	size_t count = 0;
+
+	for (int elem : V) {
+		if (elem == value) {
+			count++;
+		}
+	}
+	return count;
+}
+
  std::vector<int> QuickSort(std::vector<int> V) {
 	 if (static_cast<int>(V.size()) <= 1) {
 		 return V;
