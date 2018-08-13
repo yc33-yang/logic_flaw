@@ -42,13 +42,16 @@ size_t CountSame(const std::vector<int> &V, int value) {
 	 }
 
 	 int pivot = V.back();
+	 size_t num_pivot = CountSame(V, pivot);	 
 	 V.pop_back();
 
 	 std::vector<int> result;
 	 for (int elem : QuickSort(FilterLessThan(V, pivot))) {
 		 result.push_back(elem);
 	 }
-	 result.push_back(pivot);
+	 for (size_t i = 0; i < num_pivot; i++) {
+		 result.push_back(pivot);
+	 }
 	 for (int elem : QuickSort(FilterGreaterThan(V, pivot))) {
 		 result.push_back(elem);
 	 }
