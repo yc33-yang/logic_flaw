@@ -64,17 +64,7 @@ std::vector<T> QuickSort(std::vector<T> V) {
 	return result;
 }
 
-template <class T>
-std::ostream & operator << (std::ostream &os, const std::vector<T> &v)
-{
-	size_t num_ret = v.size();
-	for (size_t i = 0; i < num_ret; i++)
-	{
-		os << "[" << i << "] = " << v[i] << '\n';
-	}
-	return os;
-}
-
+#ifdef TEST_QUICKSORT_VECTOR_INT
 
 #include <iostream>
 
@@ -98,3 +88,5 @@ std::ostream & operator << (std::ostream &os, const std::vector<T> &v)
 	 
 	 return 0;
  }
+
+#endif
