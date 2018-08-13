@@ -46,6 +46,8 @@ std::vector<int> FilterLessThan(std::vector<int> V, int pivot) {
  }
 
 
+#include <iostream>
+
 template <class T>
 std::ostream & operator << (std::ostream &os, const std::vector<T> &v)
 {
