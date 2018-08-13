@@ -13,7 +13,7 @@ std::vector<int> InsertionSort(std::vector<int> V) {
 	}
 
 	for (int i = 0; i < static_cast<int>(V.size()) - 1; ++i) {
-		int min_index = 0;
+		int min_index = i;
 		for (int j = i; j < static_cast<int>(V.size()); ++j) {
 			if (V[min_index] > V[j]) {
 				min_index = j;
